@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1 
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -46,6 +46,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - honnibal
-    - ines
-    - adrianeboyd
+    - open-ce/open-ce-dev-team
