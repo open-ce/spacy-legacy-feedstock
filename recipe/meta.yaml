@@ -1,3 +1,4 @@
+# adapted from the conda-forge spacy-legacy recipe
 {% set name = "spacy-legacy" %}
 {% set modulename = "spacy_legacy" %}
 {% set version = "3.0.2" %}
