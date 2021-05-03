@@ -1,7 +1,7 @@
 # adapted from the conda-forge spacy-legacy recipe
 {% set name = "spacy-legacy" %}
 {% set modulename = "spacy_legacy" %}
-{% set version = "3.0.2" %}
+{% set version = "3.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5ccd60eb351964691b4f52c09f6a054e1278ef592cfbc77e7fc75aee69b57524
+  sha256: 532f78ae31659528fadb6453cdde9425a426227882c388297aafd7e7b41c2290
 
 build:
   noarch: python
