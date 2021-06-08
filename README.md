@@ -1,4 +1,4 @@
-# spacy-feedstock
+# spacy-legacy-feedstock
 
 This repository is one of several that comprise the broader [**Open-CE**](https://github.com/open-ce) project. Each feedstock repository provides a conda-based build framework for a specified package within [**Open-CE**](https://github.com/open-ce).
 
