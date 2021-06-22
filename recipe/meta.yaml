@@ -1,0 +1,45 @@
+# adapted from the conda-forge spacy-legacy recipe
+{% set name = "spacy-legacy" %}
+{% set modulename = "spacy_legacy" %}
+{% set version = "3.0.5" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 532f78ae31659528fadb6453cdde9425a426227882c388297aafd7e7b41c2290
+
+build:
+  noarch: python
+  number: 1 
+  string: py_{{ PKG_BUILDNUM }}
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed . -vv
+
+requirements:
+  host:
+    - python
+    - pip {{ pip }}
+  run:
+    - python
+
+test:
+  imports:
+    - {{ modulename }}
+
+about:
+  home: https://github.com/explosion/spacy-legacy
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Legacy functions and architectures for backwards compatibility
+  description: |
+    This package includes outdated registered functions for spaCy v3.x, for
+    example model architectures, pipeline components and utilities.
+  doc_url: https://github.com/explosion/spacy-legacy
+  dev_url: https://github.com/explosion/spacy-legacy
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
