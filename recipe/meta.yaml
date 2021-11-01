@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 2 
+  number: 3 
   string: pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed . -vv
 
@@ -22,7 +22,7 @@ requirements:
     - python
     - pip {{ pip }}
   run:
-    - python
+    - python <3.10
 
 test:
   imports:
