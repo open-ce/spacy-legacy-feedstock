@@ -5,4 +5,5 @@ tests:
   - name: Run spacy-legacy tests
     command: |
         SPACY_LEGACY_LOCATION=$(python -c "import os; import spacy_legacy; print(os.path.dirname(spacy_legacy.__file__))")
-        pytest -v $SPACY_LEGACY_LOCATION/tests/
+        python -m pytest -k "not test_logger" -v $SPACY_LEGACY_LOCATION/tests/
+
